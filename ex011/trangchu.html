@@ -1,1 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cấu Trúc & Phụ Kiện Máy Móc Ô Tô</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0d47a1;
+      --accent: #64b5f6;
+      --highlight: #ff6f00;
+      --light: #f5f5f5;
+      --dark: #212121;
+      --gradient-hero: linear-gradient(to right, #0d47a1, #64b5f6);
+      --transition: all 0.3s ease;
+      --shadow: rgba(0, 0, 0, 0.15);
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--gradient-hero);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    .rainbow-title {
+      font-size: 2.6rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff6f00, #ffca28, #42a5f5);
+      background-size: 300% 100%;
+      -webkit-text-fill-color: transparent;
+      animation: slide 8s linear infinite;
+    }
+
+    @keyframes slide {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover {
+      background: var(--accent);
+      color: var(--dark);
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px var(--shadow);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 1rem;
+      color: var(--highlight);
+    }
+
+    .card p {
+      padding: 0 1rem 1.5rem;
+      flex-grow: 1;
+    }
+
+    footer {
+      background: #263238;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cấu Trúc & Phụ Kiện Máy Móc Ô Tô</h1>
+    <nav>
+      <ul>
+        <li><a href="#engine">Động Cơ</a></li>
+        <li><a href="#turbo">Turbo</a></li>
+        <li><a href="#transmission">Hộp Số</a></li>
+        <li><a href="#suspension">Hệ Thống Treo</a></li>
+        <li><a href="#contact">Liên Hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="engine">
+    <h2>Động Cơ Ô Tô</h2>
+    <p>Động cơ là "trái tim" của ô tô, chịu trách nhiệm sinh công để vận hành xe. Hiện nay có các loại: xăng, diesel, hybrid và điện.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://henvvei.vn/uploads/images/tintuc/2024/thang-2/phan-biet-cac-dong-co-o-to-pho-bien/phan-biet-cac-dong-co-o-to-pho-bien(10).jpg" alt="Động cơ xăng">
+        <h3>Động Cơ Xăng</h3>
+        <p>Loại phổ biến nhất với khả năng vận hành êm ái, phản ứng nhanh, phù hợp cho xe cá nhân và SUV.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.lexus.com.vn/content/dam/lexus-v3-vietnam/news-and-events/2024/dong-co-dien/dong-co-dien-1.jpeg" alt="Động cơ điện">
+        <h3>Động Cơ Điện</h3>
+        <p>Không khí thải, ít bảo trì, là tương lai của ngành công nghiệp ô tô hiện đại.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="turbo">
+    <h2>Turbocharger</h2>
+    <p>Turbo giúp tăng hiệu suất động cơ bằng cách nén không khí vào buồng đốt, từ đó tăng công suất mà không cần tăng dung tích xi-lanh.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://oto-hui.com/attachments/15-dieu-co-ban-can-biet-ve-he-thong-turbo-tang-ap-17-jpg.111192/" alt="Turbo cơ bản">
+        <h3>Turbo Cơ Bản</h3>
+        <p>Sử dụng khí thải để quay tuabin và nạp khí cho động cơ, phổ biến trong xe thể thao và xe tải.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.saharamotorsuae.com/uploads/blog/25013090848twinturbo%20and%20turbo%20charged.png" alt="Twin turbo">
+        <h3>Twin Turbo</h3>
+        <p>Sử dụng hai turbo giúp giảm độ trễ, tăng tốc nhanh và mượt mà hơn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="transmission">
+    <h2>Hộp Số</h2>
+    <p>Hộp số là thành phần quan trọng điều phối sức mạnh từ động cơ đến bánh xe, giúp xe hoạt động hiệu quả ở các tốc độ khác nhau.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://hoclaixehaan.com/wp-content/uploads/2024/01/Tim-hieu-hop-so-san-o-to-la-gi.jpg" alt="Hộp số tay">
+        <h3>Hộp Số Tay</h3>
+        <p>Người lái phải sang số thủ công, thường thấy ở các dòng xe cũ và xe thể thao.</p>
+      </div>
+      <div class="card">
+        <img src="https://toyotavinhphucht.com/wp-content/uploads/2025/03/hop-so-tu-dong-la-gi-hop-so-tu-dong-6-cap-vo-cap-la-gi-bid263-4.jpg" alt="Hộp số tự động">
+        <h3>Hộp Số Tự Động</h3>
+        <p>Tự động chuyển số dựa vào tốc độ và tải trọng, tiện lợi và phù hợp với giao thông đô thị.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="suspension">
+    <h2>Hệ Thống Treo</h2>
+    <p>Giúp hấp thụ chấn động từ mặt đường, tăng độ ổn định và thoải mái khi lái xe.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://vietpassion.com.vn/wp-content/uploads/2024/08/he-thong-treo-o-to-macpherson-la-gi.jpg" alt="Hệ thống treo MacPherson">
+        <h3>MacPherson Strut</h3>
+        <p>Thiết kế đơn giản, tiết kiệm không gian, thường thấy ở cầu trước của xe phổ thông.</p>
+      </div>
+      <div class="card">
+        <img src="https://file.hstatic.net/200000536179/file/z4516156831856_c3701a50e92c66716b089b8cda0003e4_879434e3758f4586ba55b86a490f3463_grande.jpg" alt="Hệ thống treo tay đòn kép">
+        <h3>Tay Đòn Kép</h3>
+        <p>Khả năng kiểm soát tốt, thích hợp cho xe thể thao và xe hiệu suất cao.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Liên Hệ Tư Vấn</h2>
+    <p>Liên hệ với chúng tôi để được tư vấn kỹ thuật hoặc báo giá phụ kiện nâng cấp ô tô.</p>
+    <form action="#" method="post" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem;">
+      <input type="text" name="name" placeholder="Họ và tên" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" rows="4" placeholder="Nội dung cần hỗ trợ" required></textarea>
+      <button type="submit" style="padding: 0.8rem; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1rem;">Gửi Yêu Cầu</button>
+    </form>
+    <p style="margin-top: 1rem; text-align: center;">Hoặc gọi <strong>+84 912 345 678</strong> | Email: <a href="mailto:info@ototech.vn">info@ototech.vn</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 OtoTech.vn | Chuyên Gia Máy Móc & Phụ Kiện Ô Tô</p>
+    <p><a href="#engine">Quay về đầu trang</a></p>
+  </footer>
+
+</body>
+</html>
