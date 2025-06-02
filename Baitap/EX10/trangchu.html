@@ -1,1 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Những Truyền Thống Đa Sắc Dân Tộc Việt Nam</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Biến màu sắc */
+    :root {
+      --primary: #d84315;         /* Cam đất - đậm nét văn hóa */
+      --accent: #ffd180;          /* Vàng nghệ - rực rỡ ấm áp */
+      --highlight: #4db6ac;       /* Ngọc lam - hiện đại */
+      --deep-blue: #1a237e;       /* Xanh đậm truyền thống */
+      --light: #fffaf0;           /* Nền trắng kem */
+      --dark: #0a0a0a;
+      --gradient-hero: linear-gradient(to right, #f4511e, #ffca28);
+      --transition: all 0.3s ease;
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+    /* Reset cơ bản */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      line-height: 1.6;
+      background: var(--light);
+      color: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: var(--gradient-hero);
+      color: var(--light);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    html {
+  scroll-behavior: smooth;
+}
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--light);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      background: rgba(255 255 255 / 0.15);
+      transition: var(--transition);
+      font-size: 1rem;
+      user-select: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background: var(--accent);
+      color: var(--dark);
+      outline: none;
+    }
+
+    /* Hero section */
+    .hero {
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+        url('https://source.unsplash.com/1600x600/?vietnam,festival') no-repeat center/cover;
+      color: #fff;
+      padding: 6rem 2rem 8rem;
+      text-align: center;
+      box-shadow: inset 0 0 80px rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    /* Section chung */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 1.2px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+      color: #3c3c3c;
+      text-align: center;
+    }
+
+    /* Grid cho dịch vụ và dự án */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .card h3 {
+      color: var(--deep-blue);
+      padding: 1rem 1rem 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      padding: 0 1rem 1.2rem;
+      flex-grow: 1;
+      color: #4a4a4a;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Mosaic hình ảnh truyền thống */
+    .mosaic {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .mosaic img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex: 1 1 280px;
+      filter: saturate(1.3);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .mosaic img:hover {
+      transform: scale(1.07);
+      filter: brightness(1.15);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(to right, #3e2723, #4e342e);
+      color: var(--light);
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 1rem;
+      box-shadow: 0 -4px 10px var(--shadow);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .rainbow-title {
+        font-size: 2rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Những Truyền Thống Đa Sắc Dân Tộc Việt Nam</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Trang Chủ</a></li>
+        <li><a href="#about">Thông Tin</a></li>
+        <li><a href="#services">Dịch Vụ</a></li>
+        <li><a href="#projects">Dự Án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2 class="rainbow-title">Gìn giữ nét đẹp 54 dân tộc anh em</h2>
+    <p>Việt Nam là đất nước của 54 dân tộc với những truyền thống văn hóa phong phú, đa dạng và đầy màu sắc. Hãy cùng khám phá, gìn giữ và phát huy những giá trị tinh thần ấy qua từng nét đẹp truyền thống.</p>
+  </section>
+
+  <section id="about">
+    <h2 class="rainbow-title">Thông Tin Về Truyền Thống Dân Tộc</h2>
+    <p>Dân tộc Việt Nam có những lễ hội, trang phục, âm nhạc, múa hát và nghệ thuật truyền thống đa dạng, được truyền từ đời này sang đời khác. Mỗi dân tộc có nét đặc trưng riêng, góp phần tạo nên bức tranh văn hóa sinh động, hài hòa của đất nước.</p>
+    <ul>
+      <li>Lễ hội mùa xuân đậm đà bản sắc dân tộc.</li>
+      <li>Trang phục truyền thống thể hiện văn hóa và địa lý vùng miền.</li>
+      <li>Âm nhạc, múa dân gian độc đáo, mang ý nghĩa sâu sắc.</li>
+      <li>Ẩm thực truyền thống phong phú với hương vị đặc trưng.</li>
+    </ul>
+  </section>
+
+  <section id="services">
+    <h2 class="rainbow-title">Dịch Vụ Hỗ Trợ Văn Hóa</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.baodantoc.vn/uploads/2022/Th%C3%A1ng%206/Ngay_22/Anh/godongda.jpg" alt="Lễ hội dân tộc" />
+        <h3 class="rainbow-title">Tổ chức lễ hội</h3>
+        <p>Tổ chức các lễ hội truyền thống, tạo sân chơi văn hóa cho cộng đồng và du khách.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.baodantoc.vn/uploads/2024/Thang-3/Ngay-1/Nhat/trang%20phuc.jpg" alt="Trang phục truyền thống" />
+        <h3>Phục hồi trang phục</h3>
+        <p>Nghiên cứu và phục hồi trang phục truyền thống, giữ gìn bản sắc dân tộc.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn.giaoducthoidai.vn/images/b4508baace0d9fe4c8bbd296e259642e90cf49d8d4e9538b83ec7cb35f3b786113b65337b9addd667d3fb11e16c784f3fed5c7f325b4ecbccee36c10a920c1d2869d69041bac09c19c48f0faa9623ce39188e45a694c33f6b2593c8579d35f85/cach-nguoi-tre-lan-toa-am-nhac-truyen-thong-2-203.jpg.webp" alt="Âm nhạc dân gian" />
+        <h3 class="rainbow-title">Giáo dục âm nhạc</h3>
+        <p>Truyền dạy âm nhạc dân gian cho thế hệ trẻ để phát huy giá trị văn hóa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section colored">
+    <h2 class="rainbow-title">Dự Án Nổi Bật</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://vista.gov.vn/vn-uploads/news/2024/8-2024/8-8-2024/9.jpg" alt="Dự án bảo tồn" />
+        <h3 class="rainbow-title">Bảo tồn di sản văn hóa</h3>
+        <p>Dự án bảo tồn các làng nghề truyền thống và di tích văn hóa đặc sắc.</p>
+      </div>
+      <div class="card">
+        <img src="https://gomsumoc.com/wp-content/uploads/2023/06/lang-nghe-min-636x400.png" alt="Nghề thủ công" />
+        <h3 class="rainbow-title">Phát triển nghề thủ công</h3>
+        <p>Hỗ trợ phát triển nghề thủ công truyền thống, tạo thu nhập cho người dân.</p>
+      </div>
+      <div class="card">
+        <img src="https://bcp.cdnchinhphu.vn/Uploaded/nguyenminhdiem/2019_09_16/Thai.jpg" alt="Cộng đồng văn hóa" />
+        <h3 class="rainbow-title">Xây dựng cộng đồng</h3>
+        <p>Tạo dựng cộng đồng gắn kết văn hóa, phát triển bền vững.</p>
+      </div>
+    </div>
+
+    <div class="mosaic">
+      <img src="https://thumuavaiton.com/wp-content/uploads/2022/03/thumuavaiton-top-10-trang-phuc-dan-toc-noi-bat-nhat-viet-nam-0.jpg" alt="Trang phục truyền thống" />
+      <img src="https://imgnvsk.vnanet.vn/MediaUpload/Org/2023/09/06/2023-09-06-nvsk-vn-7-nhac-co-02-h846-18-26-51.jpg" alt="Âm nhạc dân gian" />
+      <img src="https://imgnvsk.vnanet.vn/MediaUpload/Medium/2024/02/09/vna-potal-thanh-pho-ho-chi-minh-dang-cung-banh-tet-quoc-to-hung-vuong-dip-tet-nguyen-dan-7215728-1-9-1-18-12.jpg" alt="Lễ hội truyền thống" />
+      <img src="https://duhoctrungquoc.org.vn/wp-content/uploads/2015/11/27.jpg" alt="Văn hóa dân tộc" />
+    </div>
+  </section>
+<section id="contact">
+  <h2 class="rainbow-title">Liên Hệ</h2>
+  <p>Nếu bạn có bất kỳ câu hỏi hoặc muốn đóng góp để phát triển và bảo tồn văn hóa dân tộc, vui lòng liên hệ với chúng tôi qua các kênh sau:</p>
+  <form action="#" method="post" style="max-width: 500px; margin: 1rem auto; display: flex; flex-direction: column; gap: 1rem;">
+    <input type="text" name="name" placeholder="Họ và tên" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;" />
+    <input type="email" name="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;" />
+    <textarea name="message" rows="4" placeholder="Nội dung liên hệ" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; resize: vertical;"></textarea>
+    <button type="submit" style="background: var(--primary); color: var(--light); padding: 0.8rem; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: background-color 0.3s ease;">Gửi Liên Hệ</button>
+  </form>
+  <p style="text-align: center; margin-top: 1rem; color: #555;">
+    Hoặc gọi trực tiếp: <a href="tel:+840123456789" style="color: var(--primary); text-decoration: none;">+84 0123 456 789</a> | Email: <a href="mailto:info@truyenthongviet.com" style="color: var(--primary); text-decoration: none;">info@truyenthongviet.com</a>
+  </p>
+</section>
+
+  <footer>
+    <p class="rainbow-title">© 2025 Những Truyền Thống Đa Sắc Dân Tộc Việt Nam | Designed by VietNam Art</p>
+    <p><a href="#home">Quay lại đầu trang</a></p>
+  </footer>
+</body>
+</html>
